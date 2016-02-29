@@ -25,11 +25,12 @@ var HttpHmacV2 = function () {
 
         HMAC.sign(sign_parameters);
 
+        // Figure out if we can also just return the request here?
         return this.provider + ' ' + this.apiKey + ':' + this.signMessage(message, this.apiSecret);
     }
 
     this.title = function (context) {
-        return 'HTTP HMAC Spec 1.0 signature';
+        return 'HTTP HMAC Spec 2.0 signature';
     }
 
     this.getContentType = function (request) {
