@@ -1,6 +1,6 @@
 {
     "name": "itafroma-http-hmac-paw",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "A Paw extension that implements version 1.0 of the HTTP HMAC Spec to sign and verify RESTful web API requests.",
     "keywords": ["REST", "Paw", "http-hmac"],
     "homepage": "https//marktrapp.com/projects/http-hmac-paw",
