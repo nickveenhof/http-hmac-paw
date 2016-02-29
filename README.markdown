@@ -9,8 +9,9 @@ First, install [Homebrew](http://brew.sh/) if you don't already have it installe
 ```sh
 brew install node
 git clone git@github.com:itafroma/http-hmac-paw.git
+cd http-hmac-paw
 npm install
-./node_modules/bin gulp install
+./node_modules/.bin gulp install
 ```
 
 You can confirm the extension is installed in Paw by opening the extensions manager via the **Paw** → **Extensions** → **Manage extensions…** menu.
