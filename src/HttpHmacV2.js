@@ -18,6 +18,7 @@ var HttpHmacV2 = function () {
           request,
           request.method,
           url.parse(request.url).path,
+          // additional headers should go here.
           "",
           this.getContentType(request),
           request.body
