@@ -64,6 +64,10 @@ var HttpHmacV1 = function () {
     }
 
     this.signMessage = function (message, secret) {
+        // Paw provides its own HMAC Signing DynamicValue,
+        // com.luckymarmot.HMACDynamicValue. However, the signature created with
+        // this method is incompatible with PHP's hash_hmac() function.
+        // The jsSHA library, on the other hand, is compatible.
         var sha = new jsSHA('SHA-1', 'TEXT');
         sha.setHMACKey(secret, 'TEXT');
         sha.update(message.join("\n"));

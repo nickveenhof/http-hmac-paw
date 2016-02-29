@@ -23,7 +23,8 @@ You can confirm the extension is installed in Paw by opening the extensions mana
 4. For the **Header Value**, start typing "HTTP HMAC". The autocomplete drop-down will suggest "HTTP HMAC Spec 1.0": select it.
 5. Click on the "HTTP HMAC 1.0 signature" token to open a popup where you can supply your credentials.
 6. Fill in the required credentials.
-7. Make your request.
+7. Add "Content-Type" and "Date" headers, required for the HTTP HMAC spec.
+8. Make your request.
 
 ## License and copyright
 
