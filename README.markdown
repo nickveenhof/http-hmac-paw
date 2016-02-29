@@ -4,22 +4,26 @@ A [Paw extension][1] that implements version 1.0 of the [HTTP HMAC Spec][2] to s
 
 ## Installation
 
-1. Open Paw.
-2. Open the extensions manager by selecting the **Paw** → **Extensions** → **Manage extensions…** menu.
-3. Note the extensions folder path.
-4. Open Terminal and navigate to the extensions folder path:
+First, install [Homebrew](http://brew.sh/) if you don't already have it installed. Next:
 
-    ```sh
-    cd /path/to/extensions
-    ```
+```sh
+brew install node
+git clone git@github.com:itafroma/http-hmac-paw.git
+npm install
+./node_modules/bin gulp install
+```
 
-5. Clone this repository into your extensions folder as `com.marktrapp.HttpHmacV1`:
+You can confirm the extension is installed in Paw by opening the extensions manager via the **Paw** → **Extensions** → **Manage extensions…** menu.
 
-    ```sh
-    git clone git@github.com:itafroma/http-hmac-paw.git com.marktrapp.HttpHmacV1
-    ```
+## Usage
 
-6. Back in Paw's extensions manager, click the **Reload Installed Extensions** button.
+1. In the request panel, select the **Headers** tab.
+2. Add a new header.
+3. For the **Header Name**, type "Authorization".
+4. For the **Header Value**, start typing "HTTP HMAC". The autocomplete drop-down will suggest "HTTP HMAC Spec 1.0": select it.
+5. Click on the "HTTP HMAC 1.0 signature" token to open a popup where you can supply your credentials.
+6. Fill in the required credentials.
+7. Make your request.
 
 ## License and copyright
 
