@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "A Paw extension that implements version 1.0 of the HTTP HMAC Spec to sign and verify RESTful web API requests.",
     "keywords": ["REST", "Paw", "http-hmac"],
-    "homepage": "https//marktrapp.com/projects/http-hmac-paw",
+    "homepage": "https://marktrapp.com/projects/http-hmac-paw",
     "bugs": {
         "url": "https://github.com/itafroma/http-hmac-paw/issues",
         "email": "mark@marktrapp.com"
@@ -14,7 +14,7 @@
         "email": "mark@marktrapp.com",
         "url": "https://marktrapp.com"
     },
-    "main": "HttpHmacV1.js",
+    "main": "HttpHmacV2.js",
     "repository": "itafroma/http-hmac-paw",
     "dependencies": {
         "del": "~2.2.0",
@@ -22,7 +22,19 @@
         "gulp": "~3.9.1",
         "jssha": "~2.0.2",
         "url": "~0.11.0",
+        "os-homedir": "1.0.1",
         "webpack": "~1.12.14",
-        "webpack-stream": "~3.1.0"
+        "webpack-stream": "~3.1.0",
+        "http-hmac-javascript": "~0.1.0",
+        "gulp-add-src": "0.2.0",
+        "gulp-babel": "6.1.2",
+        "tap": "5.7.0",
+        "gulp-concat": "^2.6.0",
+        "gulp-qunit": "^1.3.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-strip-debug": "^1.1.0",
+        "gulp-uglify": "^1.5.1",
+        "mock-xhr": "^0.1.0",
+        "qunitjs": "^1.21.0"
     }
 }

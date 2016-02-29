@@ -1,19 +1,23 @@
-var del     = require('del');
-var es      = require('event-stream');
-var gulp    = require('gulp');
-var os      = require('os');
-var path    = require('path');
-var webpack = require('webpack-stream');
+var del       = require('del');
+var es        = require('event-stream');
+var gulp      = require('gulp');
+var os        = require('os');
+var osHomedir = require('os-homedir');
+var path      = require('path');
+var webpack   = require('webpack-stream');
+
+require('gulp-add-src');
 
 const id = 'com.marktrapp';
-const name = 'HttpHmacV1';
+const name = 'HttpHmacV2';
 
 const extFile = './src/' + name + '.js';
 
 const buildDir = 'dist';
 const buildDest = path.join(__dirname, buildDir, id + '.' + name);
 
-const extDir = path.join(os.homedir(), '/Library/Containers/com.luckymarmot.Paw/Data/Library/Application Support/com.luckymarmot.Paw/Extensions');
+// /Users/nick.veenhof/Library/Containers/com.luckymarmot.Paw/Data/Library/Application Support
+const extDir = path.join(osHomedir(), '/Library/Containers/com.luckymarmot.Paw/Data/Library/Application Support/com.luckymarmot.Paw/Extensions');
 const installDir = path.join(extDir, id + '.' + name);
 
 gulp.task('build', ['clean'], function () {
