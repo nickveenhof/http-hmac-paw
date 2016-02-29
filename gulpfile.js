@@ -18,18 +18,7 @@ const installDir = path.join(extDir, id + '.' + name);
 
 gulp.task('build', ['clean'], function () {
     var buildExtension = gulp.src(extFile)
-        .pipe(webpack({
-            target: 'node-webkit',
-            entry: [
-                'url',
-                extFile
-            ],
-            output: {
-                path: buildDest,
-                publicPath: buildDir,
-                filename: name + '.js'
-            }
-        }))
+        .pipe(webpack( require('./webpack.config.js') ))
         .pipe(gulp.dest(buildDest));
 
     var copyDocs = gulp.src(['./README.markdown', './LICENSE'])
